@@ -1505,7 +1505,7 @@ Deno.serve(async (req: Request) => {
     }
   }
   return new Response(HtmlLayout("404 - 页面未找到", `<div class="card text-center py-5"><h3 class="h2 fw-bold text-danger">哎呀！页面飞走了</h3><p class="mt-3 text-muted fs-5">您所访问的页面不存在，或已被移动。</p><a href="/" class="btn btn-primary btn-lg mt-4">返回首页</a></div>`, user), { status: 404, headers: { "Content-Type": "text/html; charset=utf-8" } });
-}, { port: Number(Deno.env.get("PORT") || 8181) }); 
+}); 
 
 console.log(`Server running. Access it at: ${BASE_URL}`);
 console.log(`Ensure your BASE_URL environment variable is set correctly if deploying.`);
