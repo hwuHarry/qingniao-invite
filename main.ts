@@ -1488,7 +1488,7 @@ Deno.cron("process_scheduled_draws", "*/5 * * * *", async () => {
 });
 
 // --- 主服务器逻辑 ---
-serve(async (req: Request) => {
+Deno.serve(async (req: Request) => {
   const url = new URL(req.url);
   const user = await getSessionUser(req);
   for (const routePattern in router) {
